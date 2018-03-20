@@ -1,0 +1,23 @@
+---
+title: "Taj Mahal"
+author: "sparida"
+date: "18 March 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Map to Taj Mahal
+
+
+```{r}
+suppressWarnings(suppressPackageStartupMessages(library(leaflet)))
+TajMahal <- c("<a href= 'https://tajmahal.gov.in/overview.html' >TajMahal</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=27.173891, lng=78.042068, popup = TajMahal)
+```
+
